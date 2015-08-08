@@ -43,7 +43,14 @@ def setRadius(pos):
         radius.append(table[i][indexRow[0]:indexRow[1]])
 
     return radius
-
+    
+def totalMov(radio):
+	"""calculo la cantidad de movimiento que puede hacer en su radio"""
+	width = len(radio)
+	hight = len(radio[0])
+	lenKinght = 3
+	total = (width*hight+lenKinght) / lenKinght
+	return total
 
 def main():
     """ generamos el radio de movimiento del caballo segun la ubicacion en el tablero"""
@@ -54,6 +61,7 @@ def main():
         print "======== {0} ========".format(i + 1)
         for x in result[i]:
             print x
+
 
 if __name__ == '__main__':
     main()
